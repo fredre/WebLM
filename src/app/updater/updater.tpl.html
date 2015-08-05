@@ -1,0 +1,51 @@
+<div class="row">
+
+    <h1>Upload CSV file</h1>
+    <input type="file" on-read-file="loadCSVFile($fileContent)" />
+
+    <div ng-if="papaContent">
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                    <th ng-repeat="(key, value) in papaContent.meta.fields">{{value}}</th>
+            </tr>
+
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+            </tr>
+            <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+            </tr>
+            <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <div ng-if="papaContent">
+        <h2>Papa parse result is:</h2>
+        <pre>{{ papaContent }}</pre>
+    </div>
+
+    <div ng-if="content">
+        <h2>File content is:</h2>
+        <pre>{{ content }}</pre>
+    </div>
+
+
+
+
+
+</div>
